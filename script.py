@@ -1,7 +1,5 @@
 import pyautogui, time, PIL
 
-jmp_pixel = (119, 359)
-
 def press_spc():
     print('jump')
     pyautogui.keyDown('space')
@@ -9,7 +7,7 @@ def press_spc():
 
 def count_black():
     blck = 0 
-    captured = pyautogui.screenshot(region=(245, 300, 30, 90))
+    captured = pyautogui.screenshot(region=(245, 300, 30, 90)) #play around with the position
     for i in range(30):
         for j in range(90):
             r, g, b = captured.getpixel((i, j))
